@@ -16,4 +16,8 @@ describe('sentence case', function () {
     assert.equal(sentenceCase('dot.case'), 'dot case');
     assert.equal(sentenceCase('path/case'), 'path case');
   });
+
+  it('should handle punctuation', function () {
+    assert.equal(sentenceCase('"quotes"'), 'quotes');
+  });
 });
