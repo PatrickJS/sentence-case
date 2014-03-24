@@ -1,6 +1,6 @@
 {
   "name": "sentence-case",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sentence case a string",
   "main": "sentence-case.js",
   "scripts": {
