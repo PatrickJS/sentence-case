@@ -15,7 +15,11 @@
     "case",
     "space"
   ],
-  "author": "Blake Embrey",
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/blakeembrey/sentence-case/issues"
