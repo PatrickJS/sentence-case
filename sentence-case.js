@@ -1,11 +1,15 @@
 /**
  * Sentence case a string.
  *
- * @param  {String} string
+ * @param  {String} str
  * @return {String}
  */
-module.exports = function (string) {
-  return String(string)
+module.exports = function (str) {
+  if (str == null) {
+    return '';
+  }
+
+  return String(str)
     // Add camel case support.
     .replace(/([a-z])([A-Z0-9])/g, '$1 $2')
     // Remove every non-word character and replace with a period.

@@ -30,8 +30,13 @@ describe('sentence case', function () {
   });
 
   it('should not fail with odd input', function () {
-    assert.equal(sentenceCase(null), 'null');
+    assert.equal(sentenceCase(null), '');
+    assert.equal(sentenceCase(undefined), '');
     assert.equal(sentenceCase(10), '10');
-    assert.equal(sentenceCase(undefined), 'undefined');
+    assert.equal(sentenceCase({ toString: function () { return 'test'; } }), 'test');
+  });
+
+  it('should trim whitespace', function () {
+    assert.equal(sentenceCase(' test '), 'test');
   });
 });
