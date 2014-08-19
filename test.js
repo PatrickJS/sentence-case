@@ -23,10 +23,10 @@ describe('sentence case', function () {
     assert.equal(sentenceCase('"quotes"'), 'quotes');
   });
 
-  it('should have special support for numbers', function () {
-    assert.equal(sentenceCase('version 0.45.0'), 'version 0.45.0');
-    assert.equal(sentenceCase('version 0..78..0'), 'version 0.78.0');
-    assert.equal(sentenceCase('version.4_99/4'), 'version 4.99.4');
+  it('should keep spaces between numbers', function () {
+    assert.equal(sentenceCase('version 0.45.0'), 'version 0 45 0');
+    assert.equal(sentenceCase('version 0..78..0'), 'version 0 78 0');
+    assert.equal(sentenceCase('version.4_99/4'), 'version 4 99 4');
   });
 
   it('should not fail with odd input', function () {
