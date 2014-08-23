@@ -37,7 +37,12 @@ var TESTS = [
   [{ toString: function () { return 'test'; } }, 'test'],
 
   // Whitespace.
-  ['  test  ', 'test']
+  ['  test  ', 'test'],
+
+  // Non-ascii characters.
+  ['español', 'español'],
+  ['Beyoncé Knowles', 'beyoncé knowles'],
+  ['Iñtërnâtiônàlizætiøn', 'iñtërnâtiônàlizætiøn']
 ];
 
 describe('sentence case', function () {

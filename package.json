@@ -4,7 +4,8 @@
   "description": "Sentence case a string",
   "main": "sentence-case.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec"
+    "test": "istanbul cover _mocha -- -R spec",
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "chai": "^1.9.1",
     "istanbul": "^0.2.6",
-    "mocha": "^1.18.2"
+    "mocha": "^1.18.2",
+    "xregexp": "^2.0.0"
   }
 }

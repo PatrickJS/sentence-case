@@ -5,7 +5,7 @@
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Gittip][gittip-image]][gittip-url]
 
-Sentence case a string. Also handles non-string entities, such as objects with a `toString` property, numbers and booleans. Empty values (`null` and `undefined`) will come out as an empty string.
+Sentence case a string, with full support for non-ASCII characters. Also handles non-string entities, such as objects with a `toString` property, numbers and booleans. Empty values (`null` and `undefined`) will come out as an empty string.
 
 ## Installation
 
@@ -18,10 +18,11 @@ npm install sentence-case --save
 ```javascript
 var sentenceCase = require('sentence-case');
 
-sentenceCase(null);        //=> ""
-sentenceCase('string');    //=> "string"
-sentenceCase('dot.case');  //=> "dot case"
-sentenceCase('camelCase'); //=> "camel case"
+sentenceCase(null);              //=> ""
+sentenceCase('string');          //=> "string"
+sentenceCase('dot.case');        //=> "dot case"
+sentenceCase('camelCase');       //=> "camel case"
+sentenceCase('Beyoncé Knowles'); //=> "beyoncé knowles"
 ```
 
 ## License
